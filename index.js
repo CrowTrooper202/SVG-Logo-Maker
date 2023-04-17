@@ -1,7 +1,7 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
 
-const gererateSVG = require('./lib/shapes')
+const generateSVG = require('./lib/shapes')
 
 inquirer
         .prompt([
@@ -30,9 +30,9 @@ inquirer
             }
         ])
         
-        // .then((data) => {
+        .then((data) => {
     
-        //     const name = `ReadMeTest.md`
-        //     fs.writeFile(name, generateMarkdown(data), (err) =>
-        //         err ? console.log(err) : console.log('success!'))
-        // })
+            const name = `logo.svg`
+            fs.writeFile(name, generateSVG(data), (err) =>
+                err ? console.log(err) : console.log('success!'))
+        })
