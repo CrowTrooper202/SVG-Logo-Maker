@@ -2,6 +2,7 @@ const inquirer = require('inquirer')
 const fs = require('fs')
 
 const generateSVG = require('./lib/shapes')
+const svgGenerator = require('./lib/svgGenerator')
 
 inquirer
         .prompt([
@@ -33,6 +34,6 @@ inquirer
         .then((data) => {
     
             const name = `logo.svg`
-            fs.writeFile(name, generateSVG(data), (err) =>
+            fs.writeFile(name, svgGenerator(data), (err) =>
                 err ? console.log(err) : console.log('success!'))
         })
