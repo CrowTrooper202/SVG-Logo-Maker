@@ -12,22 +12,20 @@ inquirer
                 name: 'text',
             },
             {
-                type: 'list',
+                type: 'input',
                 message: 'What color do want for the text?',
-                choices:[],
                 name: 'txtColor',
             },
             {
                 type: 'list',
                 message: 'What Shape do you want?',
-                choices:['trangle', 'square', 'circle'],
+                choices:['triangle', 'square', 'circle'],
                 name: 'shape',
             },
             {
                 type: 'list',
                 message: 'What color shape do you want?',
                 name: 'shpColor',
-                choices: [],
             }
         ])
         
