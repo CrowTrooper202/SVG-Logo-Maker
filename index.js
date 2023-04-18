@@ -3,6 +3,8 @@ const fs = require('fs')
 
 const generateSVG = require('./lib/shapes')
 const svgGenerator = require('./lib/svgGenerator')
+const { Circle, Triangle, Rect } = require('./shapes');
+
 
 inquirer
         .prompt([
@@ -23,7 +25,7 @@ inquirer
                 name: 'shape',
             },
             {
-                type: 'list',
+                type: 'input',
                 message: 'What color shape do you want?',
                 name: 'shpColor',
             }
