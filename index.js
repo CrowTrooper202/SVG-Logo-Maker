@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const generateSVG = require('./lib/shapes')
 const svgGenerator = require('./lib/svgGenerator')
-const { Circle, Triangle, Rect } = require('./shapes');
+const { Circle, Triangle, Rect } = require('./lib/shapes');
 
 
 inquirer
